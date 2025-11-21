@@ -1,9 +1,14 @@
 body {
   background-color: #CEC2EB;
+  text-align: center;
+
 }
 
 h1 {
   color: #4b006E;
   margin-left: 20px;
   border-style: outset;
+  background-color: #B19CD7;
+  border-width: 5px;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
