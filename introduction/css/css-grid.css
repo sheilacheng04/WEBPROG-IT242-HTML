@@ -1,7 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(222, 201, 240);
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: dodgerblue;
+  background-color: rgb(147, 79, 150);
   padding: 5px;
   gap: 5px;
 }
@@ -11,4 +17,12 @@
   padding: 10px;
   font-size: 30px;
   text-align: center;
+}
+
+.profile {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
