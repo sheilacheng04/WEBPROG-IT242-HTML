@@ -11,7 +11,6 @@ body {
   color: #4a4063;
 }
 
-/* -------- GRID LAYOUT -------- */
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -24,7 +23,6 @@ body {
   padding: 12px;
 }
 
-/* Header / About Me Section */
 .header {
   grid-area: header;
   background: #b19cd9;
@@ -117,7 +115,6 @@ body {
   border-radius: 12px;
 }
 
-/* ===== RESPONSIVE BREAKPOINTS ===== */
 
 @media (min-width: 600px) {
   .grid-container {
