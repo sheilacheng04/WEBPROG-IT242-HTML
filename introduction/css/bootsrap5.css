@@ -1,34 +1,28 @@
-/* bootstrap5.css */
-
-/* Custom colors */
-.bg-purple {
-    background-color: #4A148C !important;
+/* Custom colored boxes */
+.bg-purple-light {
+    background-color: #D1C4E9; /* light purple */
+    color: #4A148C; /* dark purple text */
 }
 
-.section-title {
-    color: #4A148C;
+.bg-purple-dark {
+    background-color: #4A148C; /* dark purple */
+    color: #FFFFFF;
+}
+
+.bg-teal {
+    background-color: #26A69A; /* teal color */
+    color: #FFFFFF;
+}
+
+.bg-orange {
+    background-color: #FF7043; /* orange color */
+    color: #FFFFFF;
+}
+
+/* Add some padding and rounded corners */
+.col-box {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
     font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-/* Hover effect for skill cards */
-.skill-card:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-}
-
-/* Badge styling */
-.badge.bg-purple {
-    background-color: #6A1B9A;
-}
-
-/* Card hover effect */
-.card:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-}
-
-/* Footer */
-footer {
-    font-size: 0.9rem;
 }
