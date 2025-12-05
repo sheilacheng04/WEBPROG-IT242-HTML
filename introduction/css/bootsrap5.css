@@ -1,67 +1,24 @@
-/* Custom Color Palette */
-.bg-purple {
-    background-color: #6A1B9A !important;
-    color: #ffffff !important;
-}
+/* Simple colors using hex codes */
+.bg-purple { background-color: #6A1B9A !important; color: #FFFFFF !important; }
+.bg-light-purple { background-color: #D1C4E9 !important; color: #4A148C !important; }
+.bg-teal { background-color: #26A69A !important; color: #FFFFFF !important; }
+.bg-orange { background-color: #FF7043 !important; color: #FFFFFF !important; }
 
-.bg-purple-light {
-    background-color: #D1C4E9 !important;
-    color: #4A148C !important;
-}
-
-.bg-purple-dark {
-    background-color: #4A148C !important;
-    color: #ffffff !important;
-}
-
-.bg-teal {
-    background-color: #26A69A !important;
-    color: #ffffff !important;
-}
-
-.bg-teal-dark {
-    background-color: #00796B !important;
-    color: #ffffff !important;
-}
-
-.bg-orange {
-    background-color: #FF7043 !important;
-    color: #ffffff !important;
-}
-
-.bg-orange-dark {
-    background-color: #E64A19 !important;
-    color: #ffffff !important;
-}
-
-/* Box & Card Styles */
+/* Boxes & Cards */
 .col-box, .card {
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: center;
     font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .col-box:hover, .hover-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* Section Titles */
-.section-title {
-    font-weight: 600;
-    color: #4A148C;
-    margin-bottom: 2rem;
-}
+.section-title { font-weight: 600; color: #6A1B9A; margin-bottom: 2rem; }
 
-/* Badge Styling */
-.badge {
-    font-size: 0.9rem;
-    padding: 0.5em 0.8em;
-}
-
-/* Ensure cards with light background have dark text */
-.card.bg-purple-light, .card.bg-orange-light, .card.bg-teal-light {
-    color: #4A148C !important;
-}
+/* Badges */
+.badge { font-size: 0.9rem; padding: 0.5em 0.8em; }
