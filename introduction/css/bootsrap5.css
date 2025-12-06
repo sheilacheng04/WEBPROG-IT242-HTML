@@ -1,10 +1,13 @@
-/* Simple colors using hex codes */
 .bg-purple { background-color: #6A1B9A !important; color: #FFFFFF !important; }
-.bg-light-purple { background-color: #D1C4E9 !important; color: #4A148C !important; }
-.bg-teal { background-color: #26A69A !important; color: #FFFFFF !important; }
-.bg-orange { background-color: #FF7043 !important; color: #FFFFFF !important; }
+.bg-purple-light { background-color: #D1C4E9 !important; color: #4A148C !important; }
+.bg-purple-dark { background-color: #4A148C !important; color: #FFFFFF !important; }
 
-/* Boxes & Cards */
+.bg-teal { background-color: #26A69A !important; color: #FFFFFF !important; }
+.bg-teal-dark { background-color: #1E7F74 !important; color: #FFFFFF !important; }
+
+.bg-orange { background-color: #FF7043 !important; color: #FFFFFF !important; }
+.bg-orange-dark { background-color: #E64A19 !important; color: #FFFFFF !important; }
+
 .col-box, .card {
     padding: 20px;
     border-radius: 10px;
@@ -17,8 +20,13 @@
     transform: translateY(-5px);
 }
 
-/* Section Titles */
-.section-title { font-weight: 600; color: #6A1B9A; margin-bottom: 2rem; }
+.section-title { 
+    font-weight: 600; 
+    color: #6A1B9A; 
+    margin-bottom: 2rem; 
+}
 
-/* Badges */
-.badge { font-size: 0.9rem; padding: 0.5em 0.8em; }
+.badge { 
+    font-size: 0.9rem; 
+    padding: 0.5em 0.8em; 
+}
