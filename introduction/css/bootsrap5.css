@@ -1,17 +1,5 @@
 
-.bg-purple { background-color: #6A1B9A !important; }
-.bg-purple-light { background-color: #D1C4E9 !important; }
-.bg-purple-dark { background-color: #4A148C !important; }
-
-.bg-teal { background-color: #26A69A !important; }
-.bg-teal-dark { background-color: #1E7F74 !important; }
-
-.bg-orange { background-color: #FF7043 !important; }
-.bg-orange-dark { background-color: #E64A19 !important; }
-
-* {
-    color: #000000 !important;
-}
+.bg-white { background-color: #ffffff; }
 
 /* Boxes & Cards */
 .col-box, .card {
