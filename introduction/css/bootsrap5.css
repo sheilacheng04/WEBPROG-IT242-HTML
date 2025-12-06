@@ -1,13 +1,19 @@
-.bg-purple { background-color: #6A1B9A !important; color: #FFFFFF !important; }
-.bg-purple-light { background-color: #D1C4E9 !important; color: #4A148C !important; }
-.bg-purple-dark { background-color: #4A148C !important; color: #FFFFFF !important; }
 
-.bg-teal { background-color: #26A69A !important; color: #FFFFFF !important; }
-.bg-teal-dark { background-color: #1E7F74 !important; color: #FFFFFF !important; }
+.bg-purple { background-color: #6A1B9A !important; }
+.bg-purple-light { background-color: #D1C4E9 !important; }
+.bg-purple-dark { background-color: #4A148C !important; }
 
-.bg-orange { background-color: #FF7043 !important; color: #FFFFFF !important; }
-.bg-orange-dark { background-color: #E64A19 !important; color: #FFFFFF !important; }
+.bg-teal { background-color: #26A69A !important; }
+.bg-teal-dark { background-color: #1E7F74 !important; }
 
+.bg-orange { background-color: #FF7043 !important; }
+.bg-orange-dark { background-color: #E64A19 !important; }
+
+* {
+    color: #000000 !important;
+}
+
+/* Boxes & Cards */
 .col-box, .card {
     padding: 20px;
     border-radius: 10px;
@@ -16,17 +22,22 @@
     transition: transform 0.3s ease;
 }
 
+/* Hover */
 .col-box:hover, .hover-card:hover {
     transform: translateY(-5px);
 }
 
+/* Section Titles */
 .section-title { 
     font-weight: 600; 
-    color: #6A1B9A; 
+    color: #000000 !important;
     margin-bottom: 2rem; 
 }
 
+/* Badge */
 .badge { 
     font-size: 0.9rem; 
     padding: 0.5em 0.8em; 
+    background-color: #EEEEEE !important;
+    color: #000000 !important;
 }
