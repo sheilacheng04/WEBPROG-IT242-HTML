@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="projects-page">
+        <!-- Scrollable Content -->
+        <div class="projects-content">
+            <!-- Header Elements -->
+            <a href="index.html" class="home-button">
+                <img src="assets/Home_button.png" alt="Home">
+            </a>
+            
+            <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">
+                <img src="assets/Linkedln.png" alt="LinkedIn">
+            </a>
+            
+            <a href="mailto:contact@scheng.com" class="email-icon">
+                <img src="assets/Email.png" alt="Email">
+            </a>
+
+            <!-- Main Content -->
+            <div class="projects-wrapper">
+                <!-- Page Title -->
+                <h1 class="projects-title">PROJECTS</h1>
+
+                <!-- Description -->
+                <p class="projects-description">This section features a collection of my IT projects, focusing on coding, system analysis, and problem-solving. Each project reflects my approach to building practical solutions through careful analysis, thoughtful design, and functional development.</p>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <div class="project-item project-item-left" onclick="goToPage(1)">
+                        <img src="assets/left_page1.png" alt="Left Page" id="leftPageImg">
+                        <button class="zoom-btn" onclick="event.stopPropagation(); zoomImage(this.previousElementSibling.src)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-item project-item-right" onclick="goToPage(2)">
+                        <img src="assets/right_page1.png" alt="Right Page" id="rightPageImg">
+                        <button class="zoom-btn" onclick="event.stopPropagation(); zoomImage(this.previousElementSibling.src)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Link Text -->
+                <p class="projects-linkedin-text">Find more of my projects in my <a href="https://www.linkedin.com" target="_blank" class="linkedin-link">LinkedIn</a>!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Zoom Modal -->
+    <div id="zoomModal" class="zoom-modal" onclick="closeZoom()">
+        <span class="zoom-close">&times;</span>
+        <img class="zoom-modal-content" id="zoomedImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

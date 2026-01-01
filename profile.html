@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Sheila Nicole Cheng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-page">
+        <!-- Scrollable Content -->
+        <div class="profile-content">
+            <!-- Header Elements -->
+            <a href="index.html" class="home-button">
+                <img src="assets/Home_button.png" alt="Home">
+            </a>
+            
+            <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">
+                <img src="assets/Linkedln.png" alt="LinkedIn">
+            </a>
+            
+            <a href="mailto:contact@scheng.com" class="email-icon">
+                <img src="assets/Email.png" alt="Email">
+            </a>
+
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <img src="assets/Profile_picture.png" alt="Profile">
+            </div>
+
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                <!-- Title -->
+                <h1 class="profile-title">Hi! I'm Sheila Nicole Cheng</h1>
+
+                <!-- Bio Text -->
+                <div class="bio-section">
+                    <p class="bio-text">An analyst, developer, and designer with an interest in building thoughtful and user-centered digital solutions. I enjoy analyzing problems, developing functional systems, and designing clean, effective interfaces. I value clarity, creativity, and continuous learning, and I aim to create work that is both purposeful and impactful.</p>
+                    
+                    <p class="bio-text">Beyond the technical side, I enjoy approaching work with curiosity and balance. I believe good solutions come from both structure and creativity, and I value taking breaks, exploring new ideas, and learning through experience to stay grounded and inspired.</p>
+                </div>
+
+                <!-- Quote -->
+                <p class="quote">I believe that what's meant for me will find me — so I focus on doing the work and letting things unfold.</p>
+
+                <!-- Download CV Button -->
+                <button class="cv-button">Download CV</button>
+            </div>
+
+            <!-- Decorative Fish Elements -->
+            <div class="fish fish-1">
+                <img src="assets/fish1.png" alt="">
+            </div>
+            <div class="fish fish-2">
+                <img src="assets/fish2.png" alt="">
+            </div>
+            <div class="fish fish-3">
+                <img src="assets/fish3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        // Make fish elements draggable
+        const fishes = document.querySelectorAll('.fish');
+        let offsetX = 0;
+        let offsetY = 0;
+        let isDragging = false;
+        let currentFish = null;
+
+        fishes.forEach(fish => {
+            fish.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                isDragging = true;
+                currentFish = fish;
+                
+                // Calculate offset between mouse position and element position
+                const rect = fish.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+            });
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging && currentFish) {
+                e.preventDefault();
+                const x = e.clientX - offsetX;
+                const y = e.clientY - offsetY;
+                
+                currentFish.style.left = x + 'px';
+                currentFish.style.top = y + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            currentFish = null;
+        });
+    </script>
+</body>
+</html>
