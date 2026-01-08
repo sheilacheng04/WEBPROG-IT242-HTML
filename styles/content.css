@@ -123,14 +123,16 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 min(40px, 5vw);
     background: transparent;
     z-index: 1000;
 }
 
 .header-home-btn {
-    width: 60px;
-    height: 60px;
+    width: min(60px, 12vw);
+    height: min(60px, 12vw);
+    max-width: 60px;
+    max-height: 60px;
     transition: transform 0.3s ease;
 }
 
@@ -146,8 +148,10 @@ body::-webkit-scrollbar {
 
 /* Burger Menu */
 .burger-menu {
-    width: 50px;
-    height: 50px;
+    width: min(50px, 10vw);
+    height: min(50px, 10vw);
+    max-width: 50px;
+    max-height: 50px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -177,7 +181,8 @@ body::-webkit-scrollbar {
     position: fixed;
     top: 0;
     right: 0;
-    width: 350px;
+    width: min(350px, 80vw);
+    max-width: 350px;
     height: 100%;
     background: rgba(1, 12, 27, 0.05);
     backdrop-filter: blur(15px);
@@ -290,22 +295,31 @@ body::-webkit-scrollbar {
     min-height: 100vh;
     scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 
 .section {
     min-height: 100vh;
-    padding: 80px 60px;
+    padding: 80px min(60px, 5vw);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
 }
 
 .section-title {
-    font-size: 72px;
+    font-size: clamp(36px, 6vw, 72px);
     font-weight: bold;
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: clamp(30px, 5vw, 60px);
     text-align: center;
+    width: 100%;
 }
 
 /* Profile Section */
@@ -314,7 +328,7 @@ body::-webkit-scrollbar {
     width: 100%;
     min-height: 100vh;
     background: rgb(var(--theme-very-dark));
-    padding: 5px 60px 0px;
+    padding: 5px min(60px, 5vw) 60px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -322,10 +336,11 @@ body::-webkit-scrollbar {
 
 .profile-container {
     width: 100%;
-    max-width: 1600px;
+    max-width: min(1600px, 95vw);
     padding-top: 15px;
     padding-bottom: 10px;
-    padding-left: 9px
+    padding-left: 9px;
+    margin: 0 auto;
 }
 
 /* Profile Header Text */
@@ -724,7 +739,7 @@ body::-webkit-scrollbar {
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
-    padding: 200px;
+    padding: min(200px, 15vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
@@ -739,7 +754,7 @@ body::-webkit-scrollbar {
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
-    padding: 200px;
+    padding: min(200px, 15vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
@@ -1101,10 +1116,10 @@ body::-webkit-scrollbar {
     min-height: 100vh;
     background: rgb(var(--theme-very-dark));
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     overflow: hidden;
-    margin-top: 0;
+    margin-top: -60px;
     padding-top: 0;
 }
 
@@ -1116,8 +1131,8 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px 0;
+    justify-content: flex-start;
+    padding: 20px 0 10px;
     gap: 20px;
 }
 
@@ -1127,8 +1142,9 @@ body::-webkit-scrollbar {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
-    width: 105%;
-    max-width: 1400px;
+    width: 100%;
+    max-width: min(1400px, 95vw);
+    margin: 0 auto;
     align-items: stretch;
 }
 
@@ -1143,7 +1159,7 @@ body::-webkit-scrollbar {
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     overflow: hidden;
-    padding: 0px 65px 100px 60px;
+    padding: 0px min(65px, 5vw) 100px min(60px, 5vw);
     min-height: 500px;
     box-shadow: 
         0 20px 60px rgba(0, 30, 80, 0.4),
@@ -1160,7 +1176,7 @@ body::-webkit-scrollbar {
 }
 
 .projects-section-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
     text-align: center;
@@ -1274,14 +1290,14 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 700px;
-    max-width: 100%;
+    width: 100%;
+    max-width: min(700px, 90vw);
     margin: 0 auto;
 }
 
 .poster-grid-container {
     width: 100%;
-    height: 230px;
+    height: min(230px, 30vh);
     overflow: hidden;
     position: relative;
     perspective: 1000px;
@@ -1486,23 +1502,24 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     z-index: 10001;
-    padding: 40px;
+    padding: min(40px, 5vw);
     animation: fadeIn 0.3s ease;
 }
 
 .poster-lightbox-content {
     position: relative;
-    max-width: 800px;
+    max-width: min(800px, 90vw);
     max-height: 90vh;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    padding: 30px;
+    padding: min(30px, 5vw);
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
     animation: slideUp 0.4s ease;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .poster-lightbox-close {
@@ -2012,7 +2029,7 @@ body::-webkit-scrollbar {
 .projects-contacts-container {
     position: relative;
     flex: 1;
-    max-width: 450px;
+    max-width: min(450px, 100%);
     background: radial-gradient(circle at 30% 30%, 
         rgba(255, 255, 255, 0.14), 
         rgba(var(--theme-light), 0.10) 50%, 
@@ -2022,7 +2039,7 @@ body::-webkit-scrollbar {
     border: 1.5px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     overflow: hidden;
-    padding: 40px;
+    padding: min(40px, 5vw);
     box-shadow: 0 8px 32px rgba(0, 20, 60, 0.3),
                 0 4px 16px rgba(var(--theme-light), 0.2),
                 inset 0 1px 2px rgba(255, 255, 255, 0.2);
@@ -2030,6 +2047,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    margin: 0 auto;
 }
 
 .projects-contacts-container::before {
@@ -2057,7 +2075,7 @@ body::-webkit-scrollbar {
 }
 
 .contacts-title {
-    font-size: 28px;
+    font-size: clamp(22px, 4vw, 28px);
     font-weight: 600;
     color: white;
     margin: 0;
@@ -3061,16 +3079,17 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 80px 60px 120px;
+    padding: 80px min(60px, 5vw) 120px;
 }
 
 /* Feedback Aquarium Container with Lids */
 .feedback-aquarium {
     position: relative;
-    width: 55%;
+    width: min(55%, 750px);
     max-width: 750px;
     aspect-ratio: 750 / 380;
     min-height: 380px;
+    margin: 0 auto;
     background: linear-gradient(135deg,
         rgba(var(--theme-dark), 0.15) 0%,
         rgba(var(--theme-dark), 0.10) 30%,
@@ -3557,7 +3576,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 60px 60px 80px;
+    padding: 60px min(60px, 5vw) 80px;
 }
 
 .contacts-section::before,
@@ -3585,8 +3604,9 @@ body::-webkit-scrollbar {
 .contacts-content {
     position: relative;
     width: 90%;
-    max-width: 1200px;
-    padding: 40px;
+    max-width: min(1200px, 90vw);
+    padding: min(40px, 5vw);
+    margin: 0 auto;
     background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.15), rgba(var(--theme-light),0.12) 50%, rgba(var(--theme-dark),0.10) 100%);
     backdrop-filter: blur(25px) saturate(150%);
     -webkit-backdrop-filter: blur(25px) saturate(150%);
@@ -4299,5 +4319,55 @@ html {
     .overlay-link {
         min-height: 44px;
         min-width: 44px;
+    }
+}
+
+/* Large screens - ensure proper centering and max-widths */
+@media (min-width: 1920px) {
+    .profile-container {
+        max-width: 1800px;
+    }
+    
+    .projects-containers-wrapper {
+        max-width: 1600px;
+    }
+    
+    .resources-container {
+        max-width: 1600px;
+    }
+    
+    .contacts-content {
+        max-width: 1400px;
+    }
+    
+    .section {
+        padding: 80px 10vw;
+    }
+}
+
+/* Extra large screens - maintain layout integrity */
+@media (min-width: 2560px) {
+    .profile-container {
+        max-width: 2000px;
+    }
+    
+    .projects-containers-wrapper {
+        max-width: 1800px;
+    }
+    
+    .resources-container {
+        max-width: 1800px;
+    }
+    
+    .contacts-content {
+        max-width: 1600px;
+    }
+    
+    .section {
+        padding: 100px 12vw;
+    }
+    
+    body {
+        font-size: 18px;
     }
 }

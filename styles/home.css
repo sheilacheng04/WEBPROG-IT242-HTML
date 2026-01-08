@@ -118,8 +118,9 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 915px;
-    height: 300px;
+    width: min(915px, 90vw);
+    height: auto;
+    aspect-ratio: 915 / 300;
     max-width: 90vw;
     overflow: hidden;
     transition: opacity 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96), transform 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96), filter 1.2s ease;
@@ -127,11 +128,11 @@
 
 .title-text {
     font-family: 'Playfair Display', serif;
-    font-size: 220px;
+    font-size: clamp(60px, 15vw, 220px);
     font-weight: bold;
     color: white;
     text-align: center;
-    letter-spacing: -15px;
+    letter-spacing: clamp(-8px, -0.8vw, -15px);
     line-height: normal;
     margin: 0;
     white-space: nowrap;
@@ -148,8 +149,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 540px;
+    width: min(600px, 90vw);
+    height: auto;
+    aspect-ratio: 600 / 540;
     max-width: 90vw;
     overflow: hidden;
     opacity: 0;
@@ -314,5 +316,34 @@
     }
     100% {
         transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* Large screens - maintain centered layout */
+@media (min-width: 1920px) {
+    .title-container {
+        max-width: 100%;
+    }
+    
+    .title-short {
+        width: min(915px, 45vw);
+    }
+    
+    .title-full {
+        width: min(600px, 30vw);
+    }
+}
+
+@media (min-width: 2560px) {
+    .title-short {
+        width: min(1100px, 40vw);
+    }
+    
+    .title-full {
+        width: min(720px, 28vw);
+    }
+    
+    .btn-circle {
+        font-size: clamp(30px, 4vw, 75px);
     }
 }

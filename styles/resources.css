@@ -10,9 +10,12 @@
 }
 
 .resources-container {
-    max-width: 1200px;
+    max-width: min(1400px, 90vw);
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .resources-title {
@@ -33,9 +36,13 @@
 
 .resources-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 30px;
     margin-bottom: 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resource-category {
@@ -222,5 +229,26 @@
     .back-home-btn {
         padding: 12px 24px;
         font-size: 14px;
+    }
+}
+
+/* Large screens - ensure proper centering */
+@media (min-width: 1920px) {
+    .resources-container {
+        max-width: 1600px;
+    }
+    
+    .resources-grid {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .resources-container {
+        max-width: 1800px;
+    }
+    
+    .resources-grid {
+        max-width: 1800px;
     }
 }
