@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo/Portfolio_logo.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+    
     <div class="home-page">
         <div class="ellipse-design">
             <div class="circle circle-1"></div>
@@ -22,15 +27,15 @@
         
         <!-- Header Elements -->
         <div class="home-button">
-            <img src="assets/Home_button.png" alt="Home">
+            <img src="assets/common/Home_button.png" alt="Home">
         </div>
         
-        <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">
-            <img src="assets/Linkedln.png" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/sheila-nicole-cheng-35982b327/" target="_blank" class="linkedin-icon">
+            <img src="assets/common/Linkedln.png" alt="LinkedIn">
         </a>
         
-        <a href="mailto:contact@scheng.com" class="email-icon">
-            <img src="assets/Email.png" alt="Email">
+        <a href="mailto:sheilanicoledizon@gmail.com" class="email-icon">
+            <img src="assets/common/Email.png" alt="Email">
         </a>
         
         <!-- Main Title -->
@@ -39,16 +44,32 @@
                 <h1 class="title-text">S.CHENG</h1>
             </div>
             <div class="title-full">
-                <img src="assets/SheilaNicoleCheng.png" alt="Sheila Nicole Cheng">
+                <img src="assets/home/SheilaNicoleCheng.png" alt="Sheila Nicole Cheng">
             </div>
         </div>
         
         <!-- Button Circles -->
-        <a href="posters.html" class="btn-circle posters-btn">Posters</a>
-        <a href="contacts.html" class="btn-circle contacts-btn">Contacts</a>
-        <a href="projects.html" class="btn-circle projects-btn">Projects</a>
-        <a href="profile.html" class="btn-circle profile-btn">Profile</a>
+        <a href="content.html#posters" class="btn-circle posters-btn">
+            <span class="btn-title">Posters</span>
+            <span class="btn-description">Vibrant graphics & eye-catching designs</span>
+        </a>
+        <a href="content.html#contacts" class="btn-circle contacts-btn">
+            <span class="btn-title">Contacts</span>
+            <span class="btn-description">Reach out & let's create something amazing</span>
+        </a>
+        <a href="content.html#projects" class="btn-circle projects-btn">
+            <span class="btn-title">Projects</span>
+            <span class="btn-description">Explore my creative journey & portfolio</span>
+        </a>
+        <a href="content.html#profile" class="btn-circle profile-btn">
+            <span class="btn-title">Profile</span>
+            <span class="btn-description">Get to know me & what I'm all about</span>
+        </a>
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+    <script src="js/ripple.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
