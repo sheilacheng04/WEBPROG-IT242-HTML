@@ -1,4 +1,6 @@
 // Feedback Circles System with Drag and Physics
+// This file works with feedback-form.js which handles Firebase
+
 class FeedbackCircles {
     constructor() {
         this.container = document.querySelector('.feedback-circles-container');
@@ -11,22 +13,25 @@ class FeedbackCircles {
     }
 
     init() {
-        if (!this.container || !this.form) return;
-        
-        // Handle form submission
-        this.form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.addFeedback();
-        });
-
-        // Add some demo feedback circles
-        this.addDemoFeedback();
+        if (!this.container) return;
         
         // Setup drag functionality
         this.setupDragListeners();
         
         // Start physics simulation
         this.startPhysicsLoop();
+        
+        // Expose method globally so feedback-form.js can call it
+        window.addFeedbackCircle = (feedback) => {
+            this.createFeedbackCircle(feedback);
+        };
+        
+        // Expose method to load all circles from Firebase
+        window.loadFeedbackCircles = (feedbackArray) => {
+            feedbackArray.forEach(feedback => {
+                this.createFeedbackCircle(feedback);
+            });
+        };
     }
 
     setupDragListeners() {
@@ -341,28 +346,8 @@ class FeedbackCircles {
     }
 
     addDemoFeedback() {
-        // Add some demo feedback circles for visualization
-        const demoData = [
-            {
-                name: 'Steve Jobs',
-                email: 'thisissteve@gmail.com',
-                message: 'Amazing portfolio!'
-            },
-            {
-                name: 'Alex',
-                email: 'alex@example.com',
-                message: 'The aquarium effect is stunning. Very unique approach!'
-            },
-            {
-                name: 'Maria',
-                email: 'maria@example.com',
-                message: 'Great work! The glassmorphism effects are beautifully executed.'
-            }
-        ];
-
-        demoData.forEach(feedback => {
-            this.createFeedbackCircle(feedback);
-        });
+        // Demo feedback removed - now loading from Firebase
+        // Circles are loaded via window.loadFeedbackCircles() from feedback-form.js
     }
 }
 
