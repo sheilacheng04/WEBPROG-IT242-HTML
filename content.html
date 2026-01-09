@@ -437,13 +437,17 @@
                     
                     <!-- Contacts and Feedback Container -->
                     <div class="projects-contacts-container" id="contacts">
-                        <form class="feedback-form">
-                            <h3 class="feedback-title">Leave a thought. Watch it float.</h3>
-                            <input type="text" placeholder="Your Name" class="form-input" required>
-                            <input type="email" placeholder="Your Email" class="form-input" required>
-                            <textarea placeholder="Your Message" class="form-textarea" rows="4" required></textarea>
-                            <button type="submit" class="form-submit">Send Message</button>
-                        </form>
+                        <div id="app-feedback-form">
+                            <form class="feedback-form" @submit.prevent="submitForm">
+                                <h3 class="feedback-title">Leave a thought. Watch it float.</h3>
+                                <input type="text" placeholder="Your Name" class="form-input" v-model="form.name" required>
+                                <input type="email" placeholder="Your Email" class="form-input" v-model="form.email" required>
+                                <textarea placeholder="Your Message" class="form-textarea" rows="4" v-model="form.message" required></textarea>
+                                <button type="submit" class="form-submit" :disabled="isSubmitting">{{ isSubmitting ? 'Sending...' : 'Send Message' }}</button>
+                                <div v-if="successMessage" class="success-message">{{ successMessage }}</div>
+                                <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 </div>
