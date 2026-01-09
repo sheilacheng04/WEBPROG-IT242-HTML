@@ -23,13 +23,6 @@ createApp({
                 // Simulate form submission (replace with actual backend call)
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 
-                // Here you would typically send the data to a backend
-                // Example:
-                // const response = await fetch('/api/feedback', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify(this.form)
-                // });
                 
                 this.successMessage = 'Your message has been sent! Thanks for reaching out.';
                 this.form = { name: '', email: '', message: '' };
