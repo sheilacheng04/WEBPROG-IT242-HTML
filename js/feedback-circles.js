@@ -231,24 +231,6 @@ class FeedbackCircles {
         }, 30);
     }
 
-    addFeedback() {
-        const name = this.form.querySelector('input[type="text"]').value;
-        const email = this.form.querySelector('input[type="email"]').value;
-        const message = this.form.querySelector('textarea').value;
-
-        if (!name || !email || !message) return;
-
-        const feedback = { name, email, message };
-        this.feedbackData.push(feedback);
-        
-        this.createFeedbackCircle(feedback);
-        
-        // Reset form
-        this.form.reset();
-        
-        // Show success message
-        this.showSuccessMessage();
-    }
 
     createFeedbackCircle(feedback) {
         const circle = document.createElement('div');
