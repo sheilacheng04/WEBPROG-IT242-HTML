@@ -1,3 +1,20 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyASjoUiz0P0ihvWV9U19RhxKzRQY9b6jkU",
+  authDomain: "feedback-form-9a587.firebaseapp.com",
+  projectId: "feedback-form-9a587",
+  storageBucket: "feedback-form-9a587.firebasestorage.app",
+  messagingSenderId: "1074450828044",
+  appId: "1:1074450828044:web:92850ebef10e6ca1acd729"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 const { createApp } = Vue;
 
 createApp({
@@ -20,9 +37,13 @@ createApp({
             this.errorMessage = '';
 
             try {
-                // Simulate form submission (replace with actual backend call)
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                
+                // Send data to Firebase Firestore
+                await addDoc(collection(db, "feedback"), {
+                    name: this.form.name,
+                    email: this.form.email,
+                    message: this.form.message,
+                    timestamp: new Date()
+                });
                 
                 this.successMessage = 'Your message has been sent! Thanks for reaching out.';
                 this.form = { name: '', email: '', message: '' };
